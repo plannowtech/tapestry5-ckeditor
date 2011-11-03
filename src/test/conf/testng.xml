@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ckeditor Application Test Suite" annotations="1.5">
+    <test name="Unit Tests">
+        <packages>
+            <package name="com.plannow.tapestry5.ckeditor.integration"/>
+        </packages>
+    </test>
+</suite>

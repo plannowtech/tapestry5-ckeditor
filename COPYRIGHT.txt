@@ -1,0 +1,2 @@
+Plannow Technologies Tapestry5 CkEditor Project - Copyright 2011 Plannow Technologies, Inc, 
+and is licensed under the Apache License version 2.0 as published by the Apache Software Foundation.

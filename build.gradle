@@ -73,6 +73,6 @@ test {
 
 jar {
 	manifest {
-		attributes 'Tapestry-Module-Classes': 'com.plannow.tapestry5.ckeditor.CkEditorModule'
+		attributes 'Tapestry-Module-Classes': 'com.plannow.tapestry5.ckeditor.services.CkEditorModule'
 	}
 }

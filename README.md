@@ -8,17 +8,23 @@ This implementation is based on [CKEditor](http://ckeditor.com/).
 ckeditor mixin
 ---------
 
-This contribution provides the following features:
+This contribution provides the following feature:
 
 * Mixin:
   * CKEditor
-* Module:
-  * CKEditorModule
   
 Sample usage
 ---------------
 
-`<t:textArea t:mixins="CKEditor" value="prop:value" parameters="{'toolbar': 'Basic'}">`
+```html
+<t:textArea t:mixins="CKEditor" value="prop:value" parameters="{'toolbar': 'Basic'}" />
+```
+
+```html
+<t:textArea t:mixins="CKEditor" value="prop:value" parameters="{'toolbar': 'Full'}" />
+```
+
+Note: the value of the parameters attribute is passed to CKEditor's [replace](http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.html#.replace) method. 
 
 Copyright and license
 ---------------

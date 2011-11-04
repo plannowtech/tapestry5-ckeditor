@@ -24,7 +24,7 @@ Sample usage
 <t:textArea t:mixins="CKEditor" value="prop:value" parameters="{'toolbar': 'Full'}" />
 ```
 
-Note: the value of the parameters attribute is passed to CKEditor's [replace](http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.html#.replace) method. 
+* Note: the value of the parameters attribute is passed to CKEditor's [replace](http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.html#.replace) method. 
 
 Copyright and license
 ---------------

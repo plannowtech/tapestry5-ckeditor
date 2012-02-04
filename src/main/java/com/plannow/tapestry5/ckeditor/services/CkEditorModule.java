@@ -27,11 +27,6 @@ import org.apache.tapestry5.services.LibraryMapping;
  */
 public class CkEditorModule
 {
-	public static void contributeFactoryDefaults(MappedConfiguration<String, Object> configuration)
-	{
-		configuration.override(SymbolConstants.APPLICATION_VERSION, "0.1-SNAPSHOT");
-	}
-
 	@Contribute(ComponentClassResolver.class)
 	public static void setupCkEditorLibrary(Configuration<LibraryMapping> configuration)
 	{

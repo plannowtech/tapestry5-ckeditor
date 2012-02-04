@@ -17,11 +17,11 @@ Sample usage
 ---------------
 
 ```html
-<t:textArea t:mixins="CKEditor" value="prop:value" parameters="{'toolbar': 'Basic'}" />
+<t:textArea t:mixins="pn/CKEditor" value="prop:value" parameters="{'toolbar': 'Basic'}" />
 ```
 
 ```html
-<t:textArea t:mixins="CKEditor" value="prop:value" parameters="{'toolbar': 'Full'}" />
+<t:textArea t:mixins="pn/CKEditor" value="prop:value" parameters="{'toolbar': 'Full'}" />
 ```
 
 * Note: the value of the parameters attribute is passed to CKEditor's [replace](http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.html#.replace) method. 

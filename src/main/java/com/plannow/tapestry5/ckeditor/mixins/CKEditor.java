@@ -17,7 +17,6 @@ package com.plannow.tapestry5.ckeditor.mixins;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.MarkupWriter;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.InjectContainer;
@@ -61,6 +60,6 @@ public class CKEditor
 
 		javaScriptSupport.addScript("CKEDITOR.replace('%s', %s);", name, json.toCompactString());
 		javaScriptSupport.addScript("document.observe(Tapestry.FORM_PREPARE_FOR_SUBMIT_EVENT, function(){"
-				+ "%s.value = $$('#%s iframe')[0].contentDocument.body.innerHTML})", id, "cke_" + id);
+				+ "CKEDITOR.instances.%s.updateElement()})", id);
 	}
 }

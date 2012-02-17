@@ -61,6 +61,6 @@ public class CKEditor
 
 		javaScriptSupport.addScript("CKEDITOR.replace('%s', %s);", name, json.toCompactString());
 		javaScriptSupport.addScript("document.observe(Tapestry.FORM_PREPARE_FOR_SUBMIT_EVENT, function(){"
-				+ "%s.value = $$('#%s iframe')[0].contentDocument.body.innerHTML})", id, "cke_" + id);
+				+ "CKEDITOR.instances.%s.updateElement()})", id);		
 	}
 }

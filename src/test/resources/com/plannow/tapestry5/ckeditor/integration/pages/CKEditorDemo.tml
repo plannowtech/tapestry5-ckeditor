@@ -2,7 +2,7 @@
 
 	<t:zone t:id="mainZone">
 		<t:form zone="^">
-			<t:textarea t:mixins="pn/ckeditor" parameters="{'toolbar': 'Basic'}" value="text" style="width: 50px; height: 50px"/>
+			<t:textarea t:mixins="pn/ckeditor" parameters="{'toolbar': 'Basic'}" value="text" style="width: 50px; height: 50px" />
 			<t:submit value="save" />
 		</t:form>
 	</t:zone>

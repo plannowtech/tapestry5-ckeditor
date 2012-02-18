@@ -17,17 +17,18 @@ package com.plannow.tapestry5.ckeditor.mixins;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.MarkupWriter;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.InjectContainer;
 import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.corelib.components.TextArea;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.json.JSONArray;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
-@Import(library = "ckeditor/ckeditor.js")
+@Import(library =
+{ "ckeditor/ckeditor.js", "ckeditor/init-ckeditor.js" })
 public class CKEditor
 {
 	@Parameter
@@ -59,8 +60,6 @@ public class CKEditor
 			for (String paramName : parameters.keySet())
 				json.put(paramName, parameters.get(paramName));
 
-		javaScriptSupport.addScript("CKEDITOR.replace('%s', %s);", name, json.toCompactString());
-		javaScriptSupport.addScript("document.observe(Tapestry.FORM_PREPARE_FOR_SUBMIT_EVENT, function(){"
-				+ "CKEDITOR.instances.%s.updateElement()})", id);		
+		javaScriptSupport.addInitializerCall("initCKEditor", new JSONArray(id, name, json));
 	}
 }
